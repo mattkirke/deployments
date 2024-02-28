@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James's Python Live Dashboard</title>
+    <title>Matt's Live Dashboard</title>
     <style>
         body {
     margin: 0;
@@ -90,8 +90,8 @@ a { color: white}
     </style>
 </head>
 <body>
-    <h1>James's Live Deployments Dashboard (made with Python and Flask)</h1>
-    <div><a href="https://github.com/jamesdiffeycoding">Back to James's GitHub</a></div>
+    <h1>Matt's Live Deployments Dashboard (made with Python and Flask)</h1>
+    <div><a href="https://github.com/mattkirke">Back to Matt's GitHub</a></div>
     <br> 
     <div>Count of working sites: {{ count_of_working_sites}}</div>
     <div>Count of sites potentially needing maintenance: {{ count_of_potentially_broken_sites }} (including made up examples)</div>
@@ -160,48 +160,10 @@ a { color: white}
             {% else %}
             <div class="orange right-border-radius">{{ tp_failure_message }}</div>
             {% endif %}
-        </div>
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://jamesdiffeycoding.github.io/JS-Banana-and-Ivy-Game/">Banana and Ivy Game</a></div>
-        <div class="grid-item">HTML, CSS, JS</div>
-        <div class="grid-item">GH Pages</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if banana_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if banana_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
+        </div>      
 
         <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://rubyonrails-pokedex.onrender.com/pokemonsters">Ruby on Rails Pokedex</a></div>
-        <div class="grid-item">Ruby On Rails, HTML, CSS</div>
-        <div class="grid-item">Render</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if rubydex_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if rubydex_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
-        
-
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://secure-nextjs-homeless-shelter-database.vercel.app/">Secure Shelter Database</a></div>
+        <div class="grid-item blue"><a href="https://shelterapp-homehorizon.onrender.com/dashboard">Shelter Helper</a></div>
         <div class="grid-item">Next JS, React, Supabase, Cypress</div>
         <div class="grid-item">Vercel</div>
         <div class="grid-item-status">
@@ -218,83 +180,6 @@ a { color: white}
             <div class="orange right-border-radius">{{ tp_failure_message }}</div>
             {% endif %}
         </div>
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://django-learning-project.vercel.app/">Python / Django Learning App</a></div>
-        <div class="grid-item">Python, Django</div>
-        <div class="grid-item">Vercel</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if djangofirstproject_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if djangofirstproject_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
-        
-        
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://jamesdiffeycoding.github.io/Tailwind-Responsive-Grid-Experiments/">Tailwind Responsive Grids</a></div>
-        <div class="grid-item">Tailwind, HTML</div>
-        <div class="grid-item">GH Pages</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if tailwind_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if tailwind_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://jamesdiffeycoding.github.io/Animated-Wallpaper-StudioGhibli/">Studio Ghibli Animation</a></div>
-        <div class="grid-item">HTML, CSS</div>
-        <div class="grid-item">GH Pages</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if ghibli_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if ghibli_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
-        
-        <!-- DEPLOYMENT -->
-        <div class="grid-item blue"><a href="https://developer-lessons-react.vercel.app/">Developer Lessons Log</a></div>
-        <div class="grid-item">React, Local Storage</div>
-        <div class="grid-item">Vercel</div>
-        <div class="grid-item-status">
-            <!-- left status part -->
-            {% if devlessons_url %}
-            <div class="green left-border-radius">{{ url_success_message }}</div>
-            {% else %}
-            <div class="orange left-border-radius">{{ url_failure_message }}</div>
-            {% endif %}
-            <!-- right status part -->
-            {% if devlessons_tp %}
-            <div class="green right-border-radius">{{ tp_success_message }}</div>
-            {% else %}
-            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
-            {% endif %}
-        </div>
-
-
 
     </div>
 
