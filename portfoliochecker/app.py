@@ -20,13 +20,13 @@ def home():
     # STATUS FOR WHETHER A SITE WAS REACHED (i.e. a valid URL was provided)
     shelter_url = False
     awesunsolar_url = False
-    djangofirstproject_url = False
+    vueproject_url = False
     madeupurl_url = False # deliberate fail example site
     google_url = False # deliberate fail example site
     # STATUS VARIABLES FOR WHETHER SPECIFIED TOUCHPOINTS WERE REACHED (e.g. a h1 tag with a specific class name)
     shelter_tp = False
     awesunsolar_tp = False
-    djangofirstproject_tp = False
+    vueproject_tp = False
     madeupurl_tp = False # deliberate fail example site
     google_tp = False # deliberate fail example site
 
@@ -83,9 +83,9 @@ def home():
         awesunsolar_url = False
 
 
-    # SITE - "djangofirstproject" APP CHECK
+    # SITE - "Vue Interactive List" APP CHECK
     try: 
-        page_to_scrape = requests.get("https://django-learning-project.vercel.app/")
+        page_to_scrape = requests.get("https://vue-appliction-fzuolkd5a-matt-kirkes-projects.vercel.app/")
         soup = BeautifulSoup(page_to_scrape.content, 'html.parser')
         first_touch_points = soup.findAll("nav", attrs={"class": "navbar"})
         second_touch_points = soup.findAll("p")
@@ -93,22 +93,22 @@ def home():
 
         # Check if both lists are non-empty before proceeding
         if first_touch_points and second_touch_points:
-            djangofirstproject_tp = True
+            vueproject_tp = True
             count_of_working_sites += 1
         else:
             # print('The request went through suggesting the URL was valid, but the touch points you set may have changed')
-            djangofirstproject_tp = False
+            vueproject_tp = False
             count_of_potentially_broken_sites += 1
-        djangofirstproject_url = True
+        dvueproject_url = True
     except requests.exceptions.RequestException as e:
         # print("Error making request to shelter. Maybe there was a typo?") 
         # print(e)
         count_of_potentially_broken_sites += 1
-        djangofirstproject_url = False
+        vueproject_url = False
 
     except Exception as e: # this checks for other erros fetching the site
         count_of_potentially_broken_sites += 1
-        djangofirstproject_url = False
+        vueproject_url = False
 
 
 # DELIBERATE FAIL SITES
@@ -182,10 +182,10 @@ def home():
     # PROJECT STATUS BOOLEAN VARIABLES
     shelter_url = shelter_url,
     awesunsolar_url = awesunsolar_url,
-    djangofirstproject_url = djangofirstproject_url,
+    vueproject_url = vueproject_url,
     shelter_tp=shelter_tp,
     awesunsolar_tp=awesunsolar_tp,
-    djangofirstproject_tp=djangofirstproject_tp)
+    vueproject_tp=vueproject_tp)
     
 
 
