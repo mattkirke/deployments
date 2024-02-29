@@ -160,7 +160,26 @@ a { color: white}
             {% else %}
             <div class="orange right-border-radius">{{ tp_failure_message }}</div>
             {% endif %}
-        </div>      
+        </div>   
+        
+        <!-- DEPLOYMENT -->
+        <div class="grid-item blue"><a href="https://vue-appliction-fzuolkd5a-matt-kirkes-projects.vercel.app/">Vue Simple Website</a></div>
+        <div class="grid-item">Vue.js</div>
+        <div class="grid-item">Vercel</div>
+        <div class="grid-item-status">
+            <!-- left status part -->
+            {% if vueproject_url %}
+            <div class="green left-border-radius">{{ url_success_message }}</div>
+            {% else %}
+            <div class="orange left-border-radius">{{ url_failure_message }}</div>
+            {% endif %}
+            <!-- right status part -->
+            {% if vueproject_tp %}
+            <div class="green right-border-radius">{{ tp_success_message }}</div>
+            {% else %}
+            <div class="orange right-border-radius">{{ tp_failure_message }}</div>
+            {% endif %}
+        </div>             
 
         <!-- DEPLOYMENT -->
         <div class="grid-item blue"><a href="https://shelterapp-homehorizon.onrender.com/dashboard">Shelter Helper</a></div>

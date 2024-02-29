@@ -87,8 +87,8 @@ def home():
     try: 
         page_to_scrape = requests.get("https://vue-appliction-fzuolkd5a-matt-kirkes-projects.vercel.app/")
         soup = BeautifulSoup(page_to_scrape.content, 'html.parser')
-        first_touch_points = soup.findAll("nav", attrs={"class": "navbar"})
-        second_touch_points = soup.findAll("p")
+        first_touch_points = soup.findAll("button", attrs={"class": "buttonLinkAdd"})
+        second_touch_points = soup.findAll("div")
         page_to_scrape.raise_for_status()  # Raise an exception for HTTP errors
 
         # Check if both lists are non-empty before proceeding
@@ -99,7 +99,7 @@ def home():
             # print('The request went through suggesting the URL was valid, but the touch points you set may have changed')
             vueproject_tp = False
             count_of_potentially_broken_sites += 1
-        dvueproject_url = True
+        vueproject_url = True
     except requests.exceptions.RequestException as e:
         # print("Error making request to shelter. Maybe there was a typo?") 
         # print(e)
